@@ -1,0 +1,7 @@
+# variabila = zona din memorie care tine data
+# variabila = cutiuta in care punem valori (adica, am luat valoarea Chevrolet si am tinut-o in cutiuta marca,
+# in variabila marca). I-am dat niste instructiuni calculatorului.
+
+# am declarat (i-am dat un nume) si initializat marca
+marca = 'Chevrolet'
+model = 'Corvette'
