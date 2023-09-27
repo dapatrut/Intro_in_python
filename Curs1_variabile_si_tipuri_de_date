@@ -1,7 +1,5 @@
-# variabila = zona din memorie care tine data
-# variabila = cutiuta in care punem valori (adica, am luat valoarea Chevrolet si am tinut-o in cutiuta marca,
-# in variabila marca). I-am dat niste instructiuni calculatorului.
-
-# am declarat (i-am dat un nume) si initializat marca
-marca = 'Chevrolet'
-model = 'Corvette'
+# EXERCITUL 1
+# Variabila = pentru a lucra cu date trebuie sa declaram zone de memorie (variabile)
+# Variabila = o cutiuta din memorie in care stocam valori, aceasta este creata in momentul in care ii atribuim o valoare
+# variabila = are un nume unic pentru a fi identificata ulterior si folosita
+# variabila = nu putem pune spatiu in numele variabilei (my_var snake case care este de preferat sa fie folosit in Python , MyVar camel case)
