@@ -1,5 +1,74 @@
-# EXERCITUL 1
-# Variabila = pentru a lucra cu date trebuie sa declaram zone de memorie (variabile)
-# Variabila = o cutiuta din memorie in care stocam valori, aceasta este creata in momentul in care ii atribuim o valoare
-# variabila = are un nume unic pentru a fi identificata ulterior si folosita
-# variabila = nu putem pune spatiu in numele variabilei (my_var snake case care este de preferat sa fie folosit in Python , MyVar camel case)
+# EXERCITIUL 1:
+# În cadrul unui comentariu, explică cu cuvintele tale ce este o variabilă.
+
+# Variabila - zona din memorie care tine data (valori tinute in memorie)
+# Are un nume unic pentru a fi folosita si identificata ulterior.
+# Nu se pune spatiu in numele variabilei (my_var: snake case, de preferat in Python sau MyVar: camel case).
+
+# EXERCITIUL 2:
+# Declară și initializează câte o variabilă din fiecare din urm. tipuri: string, int, float, bool.
+# Observație: Valorile vor fi alese de tine după preferințe.
+
+marca_masina = 'Ford'   # string
+an_fabricatie = 2019    # int
+pret = 12900.60         # float
+asigurare = True        # bool
+
+# EXERCITIUL 3:
+# Utilizează funcția type pentru a verifica dacă au tipul de date așteptat.
+
+print(type(marca_masina))
+print(type(an_fabricatie))
+print(type(pret))
+print(type(asigurare))
+
+# EXERCITIUL 4:
+# Rotunjește ‘float’-ul folosind funcția round() și salvează această modificare în aceeași variabilă (suprascriere):
+# Verifică tipul acesteia.
+
+print(type(pret))
+print(round(pret))
+pret = 12901
+print(type(pret))
+
+# EXERCITIUL 5:
+# Folosește print() și printează în consolă 4 propoziții folosind cele 4 variabile.
+# Rezolvă nepotrivirile de tip prin ce modalitate dorești.
+
+print(f'Vreau sa cumpar o masina marca {marca_masina}.')
+print(f'Masina a fost fabricata in anul {an_fabricatie}.')
+print(f'{marca_masina} are pretul de {pret} euro, negociabil.')
+print(f'Masina {marca_masina} pe care urmeaza sa o achizitionez, din anul {an_fabricatie}, la pretul de {pret} Eur are asigurare?' + f'{asigurare}')
+
+# EXERCITIUL 6:
+# Citește de la tastatură: numele; prenumele.
+# Afișează:'Numele complet are x caractere'.
+
+numele = input('Te rog sa introduci numele: ')
+prenumele = input('Te rog sa introduci prenumele: ')
+print(f'Numele complet are {len(numele+prenumele)} caractere.')
+
+# EXERCITIUL 7:
+# Citește de la tastatură: lungimea; lățimea.
+# Afișează: 'Aria dreptunghiului este x'.
+
+lungimea = int(input('Te rog sa introduci lungimea dreptunghiului:\n'))
+latimea = int(input('Te rog sa introduci latimea dreptunghiului:\n'))
+arie_dreptunghi = lungimea * latimea
+print(f'Aria dreptunghiului este {arie_dreptunghi}')
+
+# EXERCITIUL 8 si 9:
+# Având stringul: 'Coral is either the stupidest animal or the smartest rock':
+# afișează de câte ori apare cuvântul 'the'.
+# Același string: Afișează de câte ori apare cuvântul 'the'; Printează rezultatul.
+
+string_prop = 'Coral is either the stupidest animal or the smartest rock'
+string_prop = string_prop.split()  # daca nu este splitat il va include si pe cel din 'either'
+the_count = string_prop.count('the')
+print(the_count)
+
+# EXERCITIUL 10:
+# Același string: Folosește un assert ca să verifici dacă acest string conține doar numere.
+
+assert string_prop.isnumeric() == True
+print('Stringul contine doar numere')  # e conditie care se evalueaza ca True or False
