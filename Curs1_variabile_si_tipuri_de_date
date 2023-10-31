@@ -72,3 +72,62 @@ print(the_count)
 
 assert string_prop.isnumeric() == True
 print('Stringul contine doar numere')  # e conditie care se evalueaza ca True or False
+
+
+
+
+EXERCITII OPTIONALE:
+
+# EXERCITIUL 1:
+# - citește de la tastatură un string de dimensiune impară;
+# - afișează caracterul din mijloc.
+
+numar = input('Introdu cuvantul:')
+last_index = len(numar)-1
+numar_impar = last_index/2
+numar_impar = int(numar_impar)
+print(numar[numar_impar])
+
+# EXERCITIUL 2:
+# Folosind assert, verifică dacă un string este palindrom.
+
+prop = input('Introdu un cuvant: ')
+assert prop == prop[::-1]
+print('Este palindrom')
+
+# EXERCITIUL 3:
+# Folosind o singură linie de cod:
+# - citește un string de la tastatură (ex: 'alabala portocala');
+# - salvează fiecare cuvânt într-o variabilă;
+# - printează ambele variabile pentru verificare
+
+string_1, string_2 = input("Introdu doua cuvinte: \n").split(); print(string_1, "\n", string_2)
+
+# EXERCITIUL 4:
+# - citește un string de la tastatură (ex: alabala portocala);
+# - salvează primul caracter într-o variabilă - indiferent care este el, încearcă cu 2 stringuri diferite;
+# - capitalizează acest caracter peste tot, mai puțin pentru primul și ultimul caracter => alAbAlA portocAla.
+
+cuvant = input('Scrie aici ceva:\n')
+first_char = cuvant[0]
+# ne va da prima litera
+last_index = int(cuvant.rindex(first_char))
+# aflam indexul unde gasim prima litera ultima oara in string, de la stanga la dreapta
+rest_chars = cuvant[last_index:len(cuvant)]
+cuvant = cuvant[1:last_index].replace(first_char, first_char.upper())
+cuvant_cu_upper = first_char + cuvant + rest_chars
+print(cuvant_cu_upper)
+
+# EXERCITIUL 5:
+# - citește un user de la tastatură;
+# - citește o parolă;
+# - afișează: 'Parola pt user x este ***** și are x caractere';
+# ***** se va calcula dinamic, indiferent de dimensiunea parolei, trebuie să afișeze corect.
+#
+# eg:  parola abc => ***
+#      parola abcd => ****
+
+user = input('Introduceti un user:\n')
+parola = input('Introduceti o parola:\n')
+parola = '*' * len(parola)
+print(f'Parola pentru userul {user} este {parola} și are {len(parola)} caractere.')
