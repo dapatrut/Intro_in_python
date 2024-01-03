@@ -1,1 +1,45 @@
+# EXERCITIUL 1:
+# Explică cu cuvintele tale în cadrul unui comentariu cum funcționează un if else.
+
+# If else evalueaza conditii si bifurca codul in functie de rezultat.
+
+# EXERCITIUL 2:
+# Verifică și afișează dacă x este număr natural sau nu.
+
+x = input("Te rog sa introduci un numar:\n")
+if x.isdigit():
+    print(f'{x} este un numar natural.')
+else:
+    print(f'{x} nu este un numar natural.')
+
+# EXERCITIUL 3:
+# Verifică și afișează dacă x este număr pozitiv, negativ sau neutru.
+
+x = int(input('Introdu numarul:'))
+if x < 0:
+    print('Numarul este negativ.')
+elif x == 0:
+    print('Numarul este neutru.')
+else:
+    print('Numarul este pozitiv.')
+
+# EXERCITIUL 4:
+# Verifică și afișează dacă x este între -2 și 13.
+
+x = int(input('Alege un numar intre -2 si 13:'))
+if x < -2:
+    print('Numarul nu este cuprins in intervalul (-2, 13).')
+elif x > 13:
+    print('Numarul nu este cuprins in intervalul (-2, 13).')
+else:
+    print('Numarul este cuprins in intervalul (-2, 13).')
+
+
+
+
+
+
+
+
+
 
