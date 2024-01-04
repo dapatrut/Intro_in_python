@@ -34,6 +34,110 @@ elif x > 13:
 else:
     print('Numarul este cuprins in intervalul (-2, 13).')
 
+# EXERCITIUL 5:
+# Verifică și afișează dacă diferența dintre x și y este mai mică de 5.
+
+y = int(input("Te rog introdu un al doilea numar:\n"))
+
+if (x - y) < 5:
+    print(f"Diferenta dintre {x} si {y} este mai mica decat 5.")
+else:
+    print(f"Diferenta dintre {x} si {y} este mai mare decat 5.")
+
+# EXERCITIUL 6:
+# Verifică dacă x NU este între 5 și 27  - a se folosi ‘not’.
+
+if not (5 < x < 27):
+    print(f'{x} nu este inclus in intervalul (5, 27)')
+else:
+    print(f'{x} este inclus in intervalul (5, 27)')
+
+# EXERCITIUL 7:
+# x și y (int). Verifică și afișează dacă sunt egale, dacă nu afișează care din ele este mai mare.
+
+x = int(input("Te rog sa introduci un numar:\n"))
+y = int(input("Te rog sa introduci un alt numar:\n"))
+
+if x == y:
+    print(f"{x} este egal cu {y}.")
+elif x < y:
+    print(f"{x} este mai mic decat {y}.")
+else:
+    print(f"{x} este mai mare decat {y}.")
+
+# EXERCITIUL 8:
+# X, y, z - laturile unui triunghi. Afișează dacă triunghiul este isoscel, echilateral sau oarecare.
+
+x, y, z = float(input("Te rog introdu cu spatiu intre ele lungimea celor trei laturi ale triunghiului:/n"))
+if x == y == z:
+    print("Acesta este un triunghi echilateral.")
+elif x == y or y == z or z == x:
+    print("Acesta este un triunghi isoscel.")
+else:
+    print("Acesta este un triunghi oarecare.")
+
+# EXERCITIUL 9: 
+# Citește o literă de la tastatură. Verifică și afișează dacă este vocală sau nu.
+
+lista_vocale = ["a", "ă", "â", "e", "i", "î", "o", "u"]
+lista_consoane = ["b", "c", "d", "f", "g", "h", "j", "l", "m", "n", "p", "r", "s", "ș", "t", "ț", "v", "z"]
+litera = input("Te rog sa introduci o litera:\n").lower()
+if litera in lista_vocale:
+    print(f"{litera.upper()} este o vocala.")
+elif litera in lista_consoane:
+    print(f"{litera.upper()} este o consoana.")
+else:
+    print(f"{litera.upper()} nu este un caracter valid. Mai incerca!")
+
+# merge si daca facem string cu vocale si string cu consoane
+string_vocale = "aăâeiîou"
+string_consoane = "bcdfghjlmnprsștțvz"
+litera = input("Te rog sa introduci o litera:\n").lower()
+if litera in string_vocale:
+    print(f"{litera.upper()} este o vocala.")
+elif litera in string_consoane:
+    print(f"{litera.upper()} este o consoana.")
+else:
+    print(f"{litera.upper()} nu este un caracter valid. Mai incerca!")
+
+# EXERCITIUL 10: 
+# Transformă și printează notele din sistem românesc în  >
+# Peste 9 => A
+# Peste 8 => B
+# Peste 7 => C
+# Peste 6 => D
+# Peste 4 => E
+# 4 sau sub => F
+
+nota = float(input("Introdu nota pe care ai luat-o:\n"))
+if 0 <= nota <= 10:
+    if nota > 9:
+        nota = "A"
+        print(f"Nota ta coincide notei {nota}.")
+    elif nota > 8:
+        nota = "B"
+        print(f"Nota ta coincide notei {nota}.")
+    elif nota > 7:
+        nota = "C"
+        print(f"Nota ta coincide notei {nota}.")
+    elif nota > 6:
+        nota = "D"
+        print(f"Nota ta coincide notei {nota}.")
+    elif nota > 4:
+        nota = "E"
+        print(f"Nota ta coincide notei {nota}.")
+    else:
+        nota = "F"
+        print(f"Nota ta coincide notei {nota}.")
+else:
+    print("Nota invalida")
+
+
+
+
+
+
+
 
 
 
