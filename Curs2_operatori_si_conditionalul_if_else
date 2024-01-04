@@ -136,6 +136,73 @@ else:
 
 
 
+# EXERCITII OPTIONALE:
+
+# EXERCITIUL 1: 
+# Verifică dacă x are minim 4 cifre (x e int). (ex: 7895 are 4 cifre, 10 nu are minim 4 cifre)
+
+x = int(input("Introdu un numar intreg:\n"))
+if 1000 <= x:
+    print(f"{x} are cel putin 4 cifre")
+else:
+    print(f"{x} nu are cel putin 4 cifre")
+
+# EXERCITIUL 2:
+# Verifică dacă x are exact 6 cifre.
+
+x = int(input("Introdu un numar intreg:\n"))
+if 100000 <= x <= 999999:
+    print(f"{x} are exact 6 cifre")
+elif x > 999999:
+    print(f"{x} are mai mult de 6 cifre")
+else:
+    print(f"{x} are mai putin de 6 cifre")
+
+# EXERCITIUL 3:
+# Verifică dacă x este număr par sau impar (x e int).
+
+x = int(input("Introdu un numar intreg:\n"))
+if x % 2 == 0:
+    print(f"{x} este un numar par.")
+else:
+    print(f"{x} este un numar impar.")
+
+# EXERCITIUL 4:
+#  x, y, z (int). Afișează care este cel mai mare dintre ele?
+
+x = int(input("Introdu un numar intreg:\n"))
+y = int(input("Introdu un al doilea numar intreg:\n"))
+z = int(input("Introdu un al treilea numar intreg:\n"))
+greater_number = 0
+print(f"Numerele pe care le-ai introdus sunt: {x}, {y}, {z}.")
+if x > y and x > z:
+    greater_number = x
+elif y > x and y > z:
+    greater_number = y
+else:
+    greater_number = z
+print(f"Cel mai mare numar introdus este {greater_number}.")
+
+# EXERCITIUL 5:
+#  X, y, z - reprezintă unghiurile unui triunghi. Verifică și afișează dacă triunghiul este valid sau nu.
+
+x=40
+y=70
+z=70
+if x+y+z==180 and x>0 and y>0 and z>0:
+    print('Triunghiul este valid !')
+else:
+    print('Triunghiul nu este valid!')
+
+
+
+
+
+
+
+
+
+
 
 
 
