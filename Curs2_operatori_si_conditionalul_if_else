@@ -186,15 +186,64 @@ print(f"Cel mai mare numar introdus este {greater_number}.")
 # EXERCITIUL 5:
 #  X, y, z - reprezintă unghiurile unui triunghi. Verifică și afișează dacă triunghiul este valid sau nu.
 
-x=40
-y=70
-z=70
-if x+y+z==180 and x>0 and y>0 and z>0:
-    print('Triunghiul este valid !')
+x = int(input("Introdu valoarea primului unghi al triunghiul:\n"))
+y = int(input("Introdu valoarea unghiului al doilea din triunghi:\n"))
+z = int(input("Introdu valoarea unghiului al treilea din triunghi:\n"))
+
+if (x+y+z) == 180:
+    print("Triunghiul este valid.")
 else:
-    print('Triunghiul nu este valid!')
+    print("Triunghiul nu este valid.")
 
+# EXERCITIUL 6:
+# Având stringul: 'Coral is either the stupidest animal or the smartest rock'.
+# Citește de la tastatură un int x.
+# Afișează stringul fără ultimele x caractere.
+# Exemplu: dacă ai ales 7 => 'Coral is either the stupidest animal or the smarte'.
 
+my_str = "Coral is either the stupidest animal or the smartest rock"
+x = int(input("Introdu un numar:"))
+print(len(my_str))       
+indexuri_fara_x = len(my_str) - x
+print(my_str[0:indexuri_fara_x])
+
+# EXERCITIUL 7:
+# Același string. Declară un string nou care să fie format din primele 5 caractere + ultimele 5.
+
+my_str = "Coral is either the stupidest animal or the smartest rock"
+new_string = my_str[:5] + my_str[-5:]
+print(new_string)
+
+# EXERCITIUL 8:
+# Același string. 
+# Salvează într-o variabilă și afișează indexul de start al cuvântului rock (hint: este o funcție care te ajuta sa faci asta)
+# Folosind această variabilă + slicing, afișează tot stringul până la acest cuvânt
+# output: 'Coral is either the stupidest animal or the smartest' 
+
+my_str = "Coral is either the stupidest animal or the smartest rock"
+index = my_str.index("rock")
+index = int(index)
+print(index)
+print(my_str[:index])
+
+# EXERCITIUL 9:
+# Citește de la tastatură un string
+Verifică dacă primul și ultimul caracter sunt la fel. Se va folosi un assert
+Atenție: se dorește ca programul să fie case insensitive - 'apA' e acceptat
+
+string = input("Introdu un cuvant:\n").lower()
+first_char = string[0]
+last_char = string[-1]
+assert first_char == last_char
+
+# EXERCITIUL 10:
+# Având stringul '0123456789'. Afișază doar numerele pare. Afișază doar numerele impare.
+# (hint: folosește slicing, controlează din pas).
+
+string = "0123456789"
+nr_pare = string[::2]
+nr_impare = string[1::2]
+print(nr_pare, nr_impare)
 
 
 
