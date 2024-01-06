@@ -5,5 +5,181 @@
 # Printează varianta actuală (inversată).
 # Pe această listă aplică o metodă care bănuiești că face același lucru, adică să îi inverseze ordinea. Nu trebuie să o suprascrii în acest caz, deoarece metoda face asta automat.
 # Printează varianta actuală a listei. Practic ai ajuns înapoi la varianta inițială.
-# Concluzii: slicing e temporar, dacă vrei să păstrezi noua variantă va trebui să suprascrii lista sau să o salvezi într-o listă nouă. Metoda găsită de tine face suprascrierea automat și permanentizează aceste modificări. Ambele variante își găsesc utilitatea în funcție de ce ne dorim în acel moment. 
+
+note_muzicale = ['do', 're', 'mi', 'fa', 'sol', 'la', 'si', 'do']
+print(note_muzicale)
+note_muzicale = note_muzicale[::-1]  
+print(note_muzicale)
+note_muzicale.reverse()
+print(note_muzicale)
+
+# EXERCITIUL 2:
+# De câte ori apare ‘do’?
+
+print(note_muzicale.count('do'))
+
+# EXERCITIUL 3:
+# Având 2 liste, [3, 1, 0, 2] și [6, 5, 4]. Găsește 2 variante să le unești într-o singură listă. 
+
+list1 = [3, 1, 0, 2]
+list2 = [6, 5, 4]
+# first method
+print(list1 + list2)  
+# second method
+list1.extend(list2)
+print(list1)
+
+# EXERCITIUL 4:
+# Sortează și afișază lista generată la exercițiul anterior.
+# Stergeti numărul 0 folosind o funcție.
+# Afișaza iar lista.
+
+list1 = [3, 1, 0, 2]
+list2 = [6, 5, 4]
+list1.extend(list2)
+print(list1)
+list1.sort()
+print(list1)
+list1.remove(0)
+print(list1)
+
+# EXERCITIUL 5:
+# Folosind un if verifică lista generată la exercițiul 3 și afișază:
+#  ⦁ Lista este goală.
+#  ⦁ Lista nu este goală.
+
+list1 = [3, 1, 0, 2]
+list2 = [6, 5, 4]
+list1.extend(list2)
+print(list1)
+list1.sort()
+print(list1)
+list1.remove(0)
+print(list1)
+list1.clear()
+print(list1)
+
+if len(list1) == 0: # al 2-lea caz in care testam listele goale
+    print('Lista este goala.')
+else:
+    print('Lista nu este goala.') # primul caz in care testam ca lista nu este goala
+
+# EXERCITIUL 6:
+# Folosește o funcție care să șteargă lista de la exercițiul 3.
+
+list1.clear()
+print(list1)
+
+# EXERCITIUL 7:
+# Copy paste la exercițiul 5. Verifică încă o dată. Acum ar trebui să se afișeze că lista e goală.
+
+list1 = [3, 1, 0, 2]
+list2 = [6, 5, 4]
+list1.extend(list2)
+print(list1)
+list1.sort()
+print(list1)
+list1.remove(0)
+print(list1)
+list1.clear()
+print(list1)
+
+if len(list1) == 0: # al 2-lea caz in care testam listele goale
+    print('Lista este goala.')
+else:
+    print('Lista nu este goala.') # primul caz in care testam ca lista nu este goala
+
+# EXERCITIUL 8:
+# Având dicționarul dict1 = {'Ana' : 8, 'Gigel' : 10, 'Dorel' : 5}
+# Folosește o funcție că să afișezi Elevii (cheile)
+
+print(dict1.keys())
+
+# EXERCITIUL 9:
+# Printează cei 3 elevi și notele lor
+# Ex: ‘Ana a luat nota {x}’
+# Doar nota o vei lua folosindu-te de cheie.
+
+dict1 = {'Ana': 8, 'Gigel': 10, 'Dorel': 5}
+print(f"Ana a luat nota {dict1['Ana']}.")
+print(f"Gigel a luat nota {dict1['Gigel']}.")
+print(f"Dorel a luat nota {dict1['Dorel']}.")
+
+# EXERCITIUL 10:
+# Dorel a făcut contestație și a primit 6. Modifică nota lui Dorel în 6. Printează nota după modificare.
+
+dict1 = {'Ana': 8, 'Gigel': 10, 'Dorel': 5}
+dict1["Dorel"] = 6
+print(f"Dorel are acum nota {dict1['Dorel']}.")
+
+# EXERCITIUL 11:
+# Gigel se transferă din clasă
+# Căuta o funcție care să îl șteargă
+# Vine un coleg nou. Adaugă Ionică, cu nota 9
+# Printează noii elevi.
+
+dict1 = {'Ana': 8, 'Gigel': 10, 'Dorel': 5}
+dict1.pop('Gigel')
+dict1['Ionica']= 9
+print(dict1)
+
+# EXERCITIUL 12:
+# Set
+zile_sapt = {'luni', 'marți', 'miercuri', 'joi', 'vineri', 'sâmbăta', 'duminică'}
+weekend = {'sâmbăta', 'duminică'}
+Adaugă în zilele_sapt ‘luni’
+Afișează zile_sapt
+
+zile_sapt = {'luni', 'marți', 'miercuri', 'joi', 'vineri', 'sâmbăta', 'duminică'}
+weekend = {'sâmbăta', 'duminică'}
+zile_sapt.add('luni')
+print(zile_sapt)
+
+# EXERCITIUL 13:
+# Folosește un if și verifică dacă:
+# Weekend este un subset al zilelor din săptămânii.
+# Weekend nu este un subset al zilelor din săptămânii.
+
+if weekend <= zile_sapt:
+    print("Weekend este un subset al zilelor din săptămânii.")
+else:
+    print("Weekend nu este un subset al zilelor din săptămânii.")
+# or
+if weekend.issubset(zile_sapt):
+    print("Weekend este un subset al zilelor din săptămânii.")
+else:
+    print("Weekend nu este un subset al zilelor din săptămânii.")
+
+# EXERCITIUL 14:
+# Afișează diferențele dintre aceste 2 seturi.
+
+zile_sapt = {'luni', 'marți', 'miercuri', 'joi', 'vineri', 'sâmbăta', 'duminică'}
+weekend = {'sâmbăta', 'duminică'}
+
+print(zile_sapt.difference(weekend))
+
+# EXERCITIUL 15:
+# Afișază intersecția elementelor din aceste 2 seturi.
+
+zile_sapt = {'luni', 'marți', 'miercuri', 'joi', 'vineri', 'sâmbăta', 'duminică'}
+weekend = {'sâmbăta', 'duminică'}
+
+print(zile_sapt.intersection(weekend))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
