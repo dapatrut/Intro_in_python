@@ -1,0 +1,28 @@
+# EXERCITIUL 1:
+# Având lista:
+# mașini = ['Audi', 'Volvo', 'BMW', 'Mercedes', 'Aston Martin', 'Lăstun', 'Fiat', 'Trabant', 'Opel'] 
+# Folosește un for că să iterezi prin toată lista și să afișezi; ‘Mașina mea preferată este x’.
+# Fă același lucru cu un for each.
+# Fă același lucru cu un while.
+
+masini = ['Audi', 'Volvo', 'BMW', 'Mercedes', 'Aston Martin', 'Lăstun', 'Fiat', 'Trabant', 'Opel']
+
+# iteram cu un for
+for i in range(len(masini)):
+    print(f'Mașina mea preferată este {masini[i]}')
+# iteram cu un for each
+for masina in masini:
+    print(f"Masina mea preferata este {masina}.")
+# iteram cu un while
+i = 0
+while i < len(masini):
+    print(f"Masina mea preferata este {masini[i]}.")
+    i += 1
+
+
+
+
+
+
+
+
