@@ -6,6 +6,139 @@ def suma_numere(a, b):
 x = suma_numere(21, 33)
 print(f'Suma celor doua numere este {x}.')
 
+# EXERCITIUL 2:
+# Funcție care să returneze TRUE dacă un număr este par, FALSE pentru impar.
+
+def verify_number_is_even(x):
+    if x % 2 == 0:
+        return True
+    else:
+        return False
+
+# EXERCITIUL 3:
+#  Funcție care returnează numărul total de caractere din numele tău complet.
+(nume, prenume, nume_mijlociu) 
+
+def calculate_name_characters(name):
+    cnt = 0
+    name = name.replace(" ", "")
+    name = name.replace("-", "")
+    for letter in name:
+        cnt += 1
+    return cnt
+print(calculate_name_characters(input("Introduce your full name:\n")))
+
+# EXERCITIUL 4:
+# Funcție care returnează aria dreptunghiului.
+
+def aria_dreptunghiului(L,l):
+    return L*l
+print(aria_dreptunghiului(3,4))
+
+# EXERCITIUL 5:
+# Funcție care returnează aria cercului
+
+def aria_cercului(raza):
+    pi = 3.14
+    return pi * (raza * raza)
+print(aria_cercului(4))
+
+# EXERCITIUL 6:
+# Funcție care returnează True dacă un caracter x se găsește într-un string dat și False dacă nu găsește.
+
+def caracter_x(caracter, cuvant):
+    if caracter in cuvant:
+        return True
+    else:
+        return False
+x = caracter_x('d', 'curs')
+print(x)
+
+# EXERCITIUL 7:
+# Funcție fără return, primește un string și printează pe ecran:
+# ⦁ Numărul de caractere lower case este x
+# ⦁ Numărul de caractere upper case exte y 
+
+def abc(cuvant):
+    upper_case=0
+    lower_case=0
+    for litera_din_cuvant in cuvant:
+        if litera_din_cuvant.isupper():
+            upper_case+=1
+        else:
+            lower_case+=1
+    print(f'Nr de caractere upper case este {upper_case}.')
+    print(f'Nr de caractere lower case este {lower_case}.')
+x=input('Introduceti un string de la tastatura: ')
+abc(x)
+
+# EXERCITIUL 8:
+# Funcție care primește o LISTĂ de numere și returnează o LISTĂ doar cu numerele pozitive.
+
+x=[3, 12, -400, 23.53, -60.535, 18, 90, -75]
+def lista_nr(lista):
+    lista_nr_pozitive=[]
+    for a in lista:
+        if a > 0:
+            lista_nr_pozitive.append(a)
+    return lista_nr_pozitive
+raspuns=lista_nr(x)
+print(f'Numerele pozitive din lista sunt: {raspuns}.')
+
+# EXERCITIUL 9:
+# Funcție care nu returneaza nimic. Primește două numere și PRINTEAZĂ
+# ⦁ Primul număr x este mai mare decat al doilea număr y
+# ⦁ Al doilea număr y este mai mare decat primul număr x
+# ⦁ Numerele sunt egale. 
+
+def numere(x, y):
+    if x > y:
+        print(f"Primul număr {x} este mai mare decat al doilea nr {y}.")
+    elif y > x:
+        print(f"Al doilea nr {y} este mai mare decat primul nr {x}.")
+    else:
+        print("Numerele sunt egale.")
+numere(1, 1)
+
+# EXERCITIUL 10:
+# Funcție care primește un număr și un set de numere.
+# Printează ‘am adaugat numărul nou în set’ + returnează True
+# Printează ‘nu am adaugat numărul în set. Acesta există deja’ + returnează False.
+
+def insert_number_in_set(nr, set1):
+    if nr in set1:
+        print(f"Nu am adaugat {nr} în set. Acesta există deja.")
+        return False
+    else:
+        set1.add(nr)
+        print(f"Am adaugat {nr} în set.")
+        return True
+set1 = {3,6,9}
+print(insert_number_in_set(2, set1))
+
+
+
+
+
+# EXERCITII OPTIONALE:
+# EXERCITIUL 1:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
