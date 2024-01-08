@@ -122,31 +122,88 @@ print(insert_number_in_set(2, set1))
 
 # EXERCITII OPTIONALE:
 # EXERCITIUL 1:
+# Funcție care primește o lună din an și returnează câte zile are acea lună.
 
+def give_days_in_month(leap_year, month):
+    if month in ["April", "June", "September", "November"]:
+        return 30
+    elif month in ["January", "March", "May", "July", "August", "October", "December"]:
+        return 31
+    elif month == "February":
+        if leap_year == "True":
+            return 29
+        else:
+            return 28
+    else:
+        print("Invalid month.")
+month = input("Introduce a month:\n")
+month = month.capitalize()
+leap_year = input("Is a leap_year?(True or False)")
+leap_year = leap_year.capitalize()
+print(give_days_in_month(leap_year, month))
 
+# EXERCITIUL 2:
+# Funcție calculator care să returneze 4 valori. Suma, diferența, înmulțirea, împărțirea a două numere.
+# În final vei putea face:
+a, b, c, d = calculator(10, 2)
+print("Suma: ", a)
+print("Diferenta: ", b)
+print("Inmultirea: ", c)
+print("Impartirea: ", d)
 
+def calculator(x1,x2):
+    return x1+x2, x1-x2, x1*x2, x1/x2
+a,b,c,d = calculator(50,3)
+print(f'Suma: {a} ')
+print(f'Diferenta: {b} ')
+print(f'Inmultirea: {c} ')
+print(f'Impartirea: {d} ')
 
+# EXERCITIUL 3:
+# Funcție care primește o listă de cifre (adică doar 0-9) 
+# Exemplu: [1, 3, 1, 5, 9, 7, 7, 5, 5]
+# Returnează un DICT care ne spune de câte ori apare fiecare cifră
+=> dict {
+0: 0
+1 :2
+2: 0
+3: 1
+4: 0
+5: 3
+6: 0
+7: 2
+8: 0
+9: 1
+}
 
+ef lista_cifre(cifre):
+    my_dict={}
+    for i in range(0,10):
+        my_dict[i]=cifre.count(i)
+    return my_dict
+lista=[1, 3, 1, 5, 9, 7, 7, 5, 5]
+print(lista_cifre(lista))
 
+# EXERCITIUL 4:
+# Funcție care primește 3 numere. Returnează valoarea maximă dintre ele.
 
+def find_biggest_number(x, y, z):
+    if x > y and x > z:
+        return x
+    elif y > x and y > z:
+        return y
+    else:
+        return z
+print(find_biggest_number(11,63,101))
 
+# EXERCITIUL 5:
+# Funcție care să primească un număr și să returneze suma tuturor numerelor de la 0 la acel număr.
+# Exemplu: dacă dăm numărul 3, suma va fi 6 (0+1+2+3).
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+def sum_of_range_numbers(number):
+    sum = 0
+    for nr in range(number + 1):
+        sum += nr
+    return sum
+print(sum_of_range_numbers(4))
 
