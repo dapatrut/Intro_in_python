@@ -1,0 +1,19 @@
+# EXERCITIUL 1:
+# Funcție care să calculeze și să returneze suma a două numere
+
+def suma_numere(a, b):
+    return (a + b)
+x = suma_numere(21, 33)
+print(f'Suma celor doua numere este {x}.')
+
+
+
+
+
+
+
+
+
+
+
+
