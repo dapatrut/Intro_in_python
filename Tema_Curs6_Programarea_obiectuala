@@ -1,1 +1,345 @@
 # EXERCITIUL 1:
+# Clasa Cerc
+    Atribute: rază, culoare
+    Constructor pentru ambele atribute
+    Metode:
+descrie_cerc() - va PRINTA culoarea și raza
+aria() - va RETURNA aria 
+diametru() 
+circumferinta()
+
+class Cerc:
+    def __init__(self,raza,culoare):
+        self.raza = raza
+        self.culoare = culoare
+
+    def descrie_cerc(self):
+        print(f'Culoarea este {self.culoare}.')
+        print(f'Raza este {self.raza}.')
+
+    def aria(self):
+        return 3.14*(self.raza*self.raza)
+
+    def diametru(self):
+        return 2*self.raza
+
+    def circumferinta(self):
+        return 3.14*2*self.raza
+
+cerc1 = Cerc(2,'alb')
+cerc1.descrie_cerc()
+print(f'Aria cercului este: {cerc1.aria()}.')
+print(f'Diametrul cercului este: {cerc1.diametru()}.')
+print(f'Circumferinta cercului este: {cerc1.circumferinta()}.')
+
+# EXERCITIUL 2:
+# Clasa Dreptunghi
+     Atribute: lungime, lățime, culoare
+     Constructor pentru toate atributele
+     Metode:
+descrie()
+aria()
+perimetrul()
+schimbă_culoarea(noua_culoare) - această metodă nu returneaza nimic. 
+Ea va lua ca și parametru o nouă culoare și va suprascrie atributul self.culoare. 
+Poți verifica schimbarea culorii prin apelarea metodei descrie().
+
+class Dreptunghi:
+    lungime = None
+    latime = None
+    culoare = 'alb'
+
+    def __init__(self, lungime, latime, culoare):
+         self.lungime = lungime
+         self.latime = latime
+         self.culoare = culoare
+
+    def descrie_dreptunghi(self):
+        print(f'Lungimea este {self.lungime}.')
+        print(f'Latimea este {self.latime}.')
+        print(f'Culoarea este {self.culoare}.')
+
+    def aria(self):
+        return self.lungime * self.latime
+
+    def perimetru(self):
+        return 2*(self.lungime+self.latime)
+
+    def schimba_culoarea(self):
+        self.culoare='verde'
+
+dreptunghi1=Dreptunghi(11,3,'alb')
+dreptunghi1.culoare='verde'
+dreptunghi1.descrie_dreptunghi()
+print(f'Aria dreptunghiului este: {dreptunghi1.aria()}')
+print(f'Perimetrul dreptunghiului este: {dreptunghi1.perimetru()}')
+dreptunghi2=Dreptunghi(25,5,'alb')
+print(f'Aria dreptunghiului este: {dreptunghi2.aria()}')
+print(f'Perimetrul dreptunghiului este: {dreptunghi2.perimetru()}')
+
+# EXERCITIUL 3:
+# Clasa Angajat
+     Atribute: nume, prenume, salariu
+     Constructor pentru toate atributele
+     Metode:
+descrie()
+nume_complet()
+salariu_lunar()
+salariu_anual()
+marire_salariu(procent)
+
+class Angajat:
+    def __init__(self, nume, prenume, salariu):
+        self.nume = nume
+        self.prenume = prenume
+        self.salariu = salariu
+
+    def descrie(self):
+        print(f"Numele meu este {self.nume} {self.prenume} si am un salariu de {self.salariu}")
+
+    def nume_complet(self) -> str:
+        return self.nume + self.prenume
+
+    def salariu_lunar(self) -> int:
+        return self.salariu
+
+    def salariu_anual(self) -> int:
+        return self.salariu * 12
+
+    def marire_salariu(self, procent: int) -> float:
+        self.salariu += ((self.salariu * procent)/100)
+        return self.salariu
+
+angajat_1 = Angajat("Popescu", "Daniela", 5000)
+angajat_1.descrie()
+print(angajat_1.nume_complet())
+print(angajat_1.salariu_lunar())
+print(angajat_1.salariu_anual())
+print(angajat_1.marire_salariu(12))
+
+# EXERCITIUL 4:
+# Clasa Cont
+   Atribute: iban, titular_cont, sold
+   Constructor pentru toate atributele
+   Metode:
+afisare_sold() - Titularul x are în contul y suma de n lei
+debitare_cont(suma)
+creditare_cont(suma)
+
+class Cont:
+    def __init__(self, iban, titular_cont, sold):
+        self.iban = iban
+        self.titular_cont = titular_cont
+        self.sold = sold
+
+    def afisare_sold(self):
+        print(f"Titularul {self.titular_cont} are în contul {self.iban} suma de {self.sold} lei.")
+
+    def debitare_cont(self, suma_retrasa):
+        self.sold -= suma_retrasa
+        return self.sold
+
+    def creditare_cont(self, suma_introdusa):
+        self.sold += suma_introdusa
+        return self.sold
+
+cont = Cont(123456, "Popescu Daniela", 5200)
+cont.afisare_sold()
+print(cont.debitare_cont(1000))
+print(cont.creditare_cont(400))
+
+
+
+
+
+# EXERCITII OPTIONALE:
+# EXERCITIUL 1:
+# Clasa Factură
+     Atribute: seria (va fi constantă, nu trebuie constructor, toate facturile vor avea aceeași serie), număr, nume_produs, cantitate, pret_buc
+     Constructor: toate atributele, fără serie
+     Metode:
+schimbă_cantitatea(cantitate)
+schimbă_prețul(pret)
+schimbă_nume_produs(nume)
+generează_factura() - va printa tabelar dacă reușiți
+
+Factura seria x număr y
+Data: generează automat data de azi
+Produs | cantitate | preț bucată | Total 
+Telefon |      7       |       700       | 49000     
+
+Indiciu pentru dată: https://www.geeksforgeeks.org/get-current-date-using-python/
+
+class Cont:
+    def __init__(self,iban,titular_cont,sold):
+        self.iban = iban
+        self.titular_cont = titular_cont
+        self.sold = sold
+
+    def descriere(self):
+        print(f'IBAN-ul dumneavoastra este: {self.iban}.')
+        print(f'Titularul de cont este: {self.titular_cont}.')
+        print(f'Aveti urmatorul sold: {self.sold}.')
+
+    def afisare_sold(self):
+        print(f'Titularul {self.titular_cont} are in contul {self.iban} suma de {self.sold}.')
+
+    def debitare_cont(self):
+        amount_debitare = float(input("Introduceti suma pe care doriti sa o transferati:  "))
+        if amount_debitare > self.sold:
+            print('Nu mai aveti fonduri disponibile.')
+        else:
+            self.sold -= amount_debitare
+            print(f'Aveti un sold de {self.sold}')
+
+    def creditare_cont(self):
+        amount_creditare = float(input("Introduceti suma pe care ati primit-o:  "))
+        self.sold += amount_creditare
+        print(f'Contul este alimentat cu: {self.sold}')
+
+cont1=Cont(5893533659817,'Popescu Daniela', 5300)
+cont1.descriere()
+cont1.afisare_sold()
+cont1.debitare_cont()
+cont1.creditare_cont()
+
+# EXERCITIUL 2:
+# Clasa Mașină
+Atribute: marca, model, viteza maximă, viteza_actuală, culoare, culori disponibile (set), înmatriculată (bool)
+   Culoare = gri - toate mașinile când ies din fabrică sunt gri
+   Viteza_actuală = 0 - toate mașinile stau pe loc când ies din fabrică
+   Culori disponibile = alege tu 5-7 culori
+   Marca = alege tu - fabrica produce o singură marcă, dar mai multe modele
+   Înmatriculată = False
+Constructor: model, viteza_maxima
+Metode:
+descrie() - se vor printa toate atributele, în afară de culori_disponibile
+înmatriculare() - va schimba atributul înmatriculată în True
+vopsește(culoare) - se va vopsi mașina în noua culoare DOAR dacă noua culoare e în opțiunea de culori disponibile, altfel afișați o eroare
+accelerează(viteza) - se va accelera la o anumită viteză, dacă viteza e negativă-eroare, dacă viteza e mai mare decât viteza_max - masina va accelera până la viteza maximă
+franeaza() - mașina se va opri și va avea viteza 0.
+
+class Masina:
+    marca = 'Ford'
+    model = None
+    viteza_maxima = 180
+    viteza_actuala = 0
+    culoare = 'gri'
+    culori_disponibile = ['alb','rosu','albastru','negru']
+    inmatriculata = False
+
+    def __init__(self,model,viteza_maxima):
+        self.model = model
+        self.viteza_maxima = viteza_maxima
+
+    def descrie(self):
+        print(f'Marca masinii este: {self.marca}.')
+        print(f'Modelul masinii este: {self.model}.')
+        print(f'Viteza maxima a masinii este: {self.viteza_maxima}.')
+        print(f'Viteza actuala a masinii este: {self.viteza_actuala}.')
+        print(f'Culoarea masinii este: {self.culoare}.')
+        print(f'Masina este inamtriculata: {self.inmatriculata}.')
+
+    def inmatriculare(self):
+        self.inmatriculata= True
+        return self.inmatriculata
+
+    def vopseste_masina(self,noua_culoare):
+        if noua_culoare in self.culori_disponibile:
+            self.culoare = noua_culoare
+            print(f'Noua culoare a masinii este: {self.culoare}.')
+        else:
+            print('Culoarea aleasa de dvs nu este in paletarul nostru.')
+
+    def accelereaza(self,viteza_noua):
+        self.viteza_actuala=viteza_noua
+        if self.viteza_actuala < 0:
+            print('EROARE!')
+        elif self.viteza_actuala >= self.viteza_maxima:
+            print(f'Viteza maxima este: {self.viteza_maxima}.')
+        else:
+            print(f'Viteza actuala este: {self.viteza_actuala}.')
+
+    def franeaza(self,viteza_noua):
+        self.viteza_actuala=viteza_noua
+        if self.viteza_actuala ==0:
+            print('Masina s-a oprit.')
+        else:
+            print('Masina nu s-a oprit.')
+
+masina1=Masina('Focus',180)
+masina1.descrie()
+print(f'Masina a fost inmatriculata: {masina1.inmatriculare()}.')
+masina1.vopseste_masina('bej')
+masina1.vopseste_masina('negru')
+masina1.accelereaza(-30)
+masina1.accelereaza(0)
+masina1.accelereaza(10)
+masina1.accelereaza(179)
+masina1.franeaza(0)
+masina1.franeaza(3)
+
+EXERCITIUL 3:
+# Clasa TodoList
+Atribute: todo (dict, cheia e numele taskului, valoarea e descrierea).
+La început nu avem taskuri, dict e gol și nu avem nevoie de constructor.
+
+Metode:
+● adauga_task(nume, descriere) - se va adauga in dict
+● finalizează_task(nume) - se va sterge din dict
+● afișează_todo_list() - doar cheile
+● afișează_detalii_suplimentare(nume_task) - în funcție de numele taskului, printăm detalii suplimentare. 
+Dacă taskul nu e în todo list, întrebam utilizatorul dacă vrea să-l adauge.
+Dacă acesta răspunde nu - la revedere.
+Dacă răspunde da - îi cerem detalii task și salvăm nume+detalii în dict.
+
+class ToDoList:
+    dict = {}
+
+    def adauga_task(self,nume_task,descriere_task):
+        self.dict[nume_task] = descriere_task
+
+    def finalizeaza_task(self,nume_task):
+        del self.dict[nume_task]
+
+    def afiseaza_todo_list(self):
+        print(f'Task-urile din todo list sunt: {self.dict.keys()}')
+
+    def afiseaza_detalii_suplimentare(self,nume_task):
+        if nume_task in self.dict:
+            print(f'Descrierea task-ului: {nume_task} si detaliile suplimentare {self.dict[nume_task]}.')
+        else:
+            raspuns=input('Vrei sa adaugi task-ul in lista?')
+            if raspuns == 'da':
+                descriere_task=input('Introdu descrierea pentru noul task: ')
+                self.dict[nume_task]=descriere_task
+                print(f'Descrierea task-ului: {nume_task} si detaliile suplimentare {self.dict[nume_task]} !')
+            else:
+                print('La revedere!')
+
+todolist1=ToDoList()
+todolist1.adauga_task('Cumparaturi','apa, fructe, legume')
+todolist1.afiseaza_todo_list()
+todolist1.afiseaza_detalii_suplimentare('Cumparaturi')
+todolist1.afiseaza_detalii_suplimentare('macarons')
+todolist1.afiseaza_todo_list()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
