@@ -1,0 +1,109 @@
+# ABSTRACTION 
+# Clasa abstractă FormaGeometrica
+# Conține un field PI=3.14
+# Conține o metodă abstractă aria (opțional)
+# Conține o metodă a clasei descrie() - aceasta printează pe ecran ‘Cel mai probabil am colturi’
+
+# INHERITANCE
+# Clasa Pătrat - moștenește FormaGeometrica
+# constructor pentru latură
+
+# ENCAPSULATION
+# latura este proprietate privată
+# Implementează getter, setter, deleter pentru latură
+# Implementează metoda cerută de interfață (opțional, doar dacă ai ales să implementezi metoda abstractă aria)
+
+# Clasa Cerc - moștenește FormaGeometrica
+# constructor pentru rază
+# raza este proprietate privată
+# Implementează getter, setter, deleter pentru rază
+# Implementează metoda cerută de interfață - în calcul folosește field PI mostenit din clasa părinte (opțional, doar dacă ai ales să implementezi metoda abstractă aria)
+
+# POLYMORPHISM 
+# Definește o nouă metodă descrie - printează ‘Eu nu am colturi’
+
+# Creati un obiect de tip Patrat și joacă-te cu metodele lui
+# Creati un obiect de tip Cerc și joacă-te cu metodele lui
+
+
+# ABSTRACTION
+from abc import ABC, abstractmethod
+
+class FormaGeometrica(ABC):
+    pi = 3.14
+
+    @abstractmethod
+    def aria(self):
+        pass
+
+    @classmethod
+    def descrie(self):
+        print('Cel mai probabil am colturi.')
+
+# INHERITANCE
+class Patrat(FormaGeometrica):
+    __latura = None
+
+    # ENCAPSULATION
+    def get_latura(self):  
+        return self.__latura
+
+    def set_latura(self, latura_dorita): 
+        self.__latura = latura_dorita
+
+    def delete_latura(self):
+        self.__latura = None
+
+    def aria(self):
+        print(f'Aria patratului este {self.__latura * self.__latura} .')
+
+
+class Cerc(FormaGeometrica):
+    __raza = None
+
+    def get_raza(self):  
+        return self.__raza
+
+    def set_raza(self, raza_dorita):  
+        self.__raza = raza_dorita
+
+    def delete_raza(self):
+        self.__raza = None
+
+    def aria(self):
+        print(f'Aria cercului este: {(self.__raza * self.__raza) * self.pi}.')
+
+    def descrie(self):
+        print('Eu nu am colturi.')
+
+p = Patrat()
+p.set_latura(8)
+p.aria()
+print(p.get_latura())
+print(p.delete_latura())
+p.descrie()
+p.set_latura(4)
+
+c = Cerc()
+c.set_raza(2)
+c.aria()
+c.descrie()
+
+i = Patrat()
+i.set_latura(120)
+i.descrie()
+i.aria()
+print(i.get_latura())
+
+print(p.get_latura()*c.get_raza()*i.get_latura())
+
+
+
+
+
+
+
+
+
+
+
