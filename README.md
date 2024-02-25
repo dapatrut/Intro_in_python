@@ -1,4 +1,4 @@
-#### Python
+# Python
 
 Here are all my homeworks from the courses I made, "Intro to Python" from IT Factory.
 
@@ -9,3 +9,5 @@ On the topics covered into this project I can mention:
   - loops (while, for)
   - functions
   - OOP basics.
+    
+I used JetBrains PyCharm Community.
