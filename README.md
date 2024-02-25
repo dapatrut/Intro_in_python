@@ -1,4 +1,6 @@
-#### Here are all my homeworks from the courses I made, "Intro to Python" from IT Factory.
+#### Python
+
+Here are all my homeworks from the courses I made, "Intro to Python" from IT Factory.
 
 On the topics covered into this project I can mention:
   - variables and data types
@@ -6,4 +8,4 @@ On the topics covered into this project I can mention:
   - data structures (array, map, list)
   - loops (while, for)
   - functions
-  - oop basics.
+  - OOP basics.
